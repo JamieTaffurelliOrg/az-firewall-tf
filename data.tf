@@ -6,7 +6,7 @@ data "azurerm_public_ip_prefix" "ip_prefix" {
 data "azurerm_subnet" "firewall_subnet" {
   name                 = "AzureFirewallSubnet"
   virtual_network_name = var.virtual_network_name
-  resource_group_name  = var.virtual_network_resource_group_name
+  resource_group_name  = var.resource_group_name
 }
 
 data "azurerm_firewall_policy" "firewall_policy" {
