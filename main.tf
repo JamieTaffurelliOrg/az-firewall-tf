@@ -74,6 +74,8 @@ resource "azurerm_firewall" "firewall" {
     subnet_id            = data.azurerm_subnet.firewall_subnet.id
     public_ip_address_id = azurerm_public_ip.firewall_public_ip.id
   }
+
+  tags = var.tags
 }
 
 resource "azurerm_monitor_diagnostic_setting" "firewall_diagnostics" {

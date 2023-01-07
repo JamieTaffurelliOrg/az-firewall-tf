@@ -61,11 +61,6 @@ variable "virtual_network_name" {
   description = "Virtual network of firewall"
 }
 
-variable "virtual_network_resource_group_name" {
-  type        = string
-  description = "Virtual network resource group name"
-}
-
 variable "zone_redundant" {
   type        = bool
   default     = true
