@@ -25,6 +25,12 @@ variable "idle_timeout_in_minutes" {
   description = "Idle timeout of the public IP of the firewall"
 }
 
+variable "threat_intel_mode" {
+  type        = string
+  default     = "Deny"
+  description = "The operation mode for threat intelligence-based filtering"
+}
+
 variable "public_ip_prefix_name" {
   type        = string
   description = "Name of the prefix of the public IP of the firewall"

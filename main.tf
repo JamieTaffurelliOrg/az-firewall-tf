@@ -66,6 +66,7 @@ resource "azurerm_firewall" "firewall" {
   resource_group_name = var.resource_group_name
   sku_name            = "AZFW_VNet"
   sku_tier            = var.firewall_sku
+  threat_intel_mode   = var.threat_intel_mode
   firewall_policy_id  = data.azurerm_firewall_policy.firewall_policy.id
   zones               = var.zone_redundant == true ? ["1", "2", "3"] : null
 
